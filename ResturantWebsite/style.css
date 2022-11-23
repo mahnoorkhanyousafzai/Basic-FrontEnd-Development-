@@ -1,0 +1,119 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+.navbar ul{
+    font-size: 100%;
+    font-weight: 500;
+ 
+    list-style-type: none;
+    position: relative;
+    overflow: hidden; 
+    margin: 0%;
+    padding: 0%;  
+ background-color: black;
+}
+.navbar li{
+    float: left;
+}
+.navbar  a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 26px;
+   margin: 2%;
+    text-decoration: none;
+border-style: solid;
+
+border-color: white;
+
+
+border-radius: 20%;
+}
+
+.navbar a:hover{
+background-color: green;
+}
+.Header{
+    background-image: url("Images/Canoe-Interior-Evening-Vibes-5170.jpg") ;
+    background-size: 100%;
+height: 100%;
+
+background-repeat: no-repeat;
+}
+.container{
+    color: white;
+    background-color: black;
+
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+.mainHeading{
+    font-size: 300%;
+    
+}
+.container p{
+    font-size: 200%;
+}
+.About{
+    text-align: center;
+}
+
+.containerLeft p{
+    float: left;
+    line-height: 1.4em;
+    width: 50%;
+}
+.containerLeft img{
+ margin-top: 2%;
+    float: right;
+    width: 30%;
+}
+.Story{
+display: block;
+}
+.stylingp p{
+    background-color: peru;
+   padding: 5%;
+   border: solid;
+   border-color: black;
+   border-top-left-radius: 20%;
+   border-bottom-right-radius: 20%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30%;
+    padding: 3px;
+    background-color: black;
+    color: white;
+  }
+  footer iframe{
+    width: 40%;
+    height: 40%;
+  }
+  .menuhead{
+   
+    text-align: center;
+  }
+  .menuhead h1{
+    font-size: 500%;
+  }
+.Menu{
+    color: green;
+}
+.menu ul{
+    list-style-type: none;
+    color: black;
+}
+.menu .menuLeft{
+    float: left;
+    margin-left: 20%;
+}
+.menu .menuRight{
+    float: right;
+    margin-right: 20%;
+}
+.menu hr{
+    border-color: black;
+}
