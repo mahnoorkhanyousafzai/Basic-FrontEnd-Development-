@@ -1,0 +1,1784 @@
+<html>
+<head>
+<title>Search Bar by Mahnoor Khan</title>
+
+
+<link href="jquery.searchableSelect.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.11.1.min.js"></script>
+<script src="jquery.searchableSelect.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+  .slideshow-container{
+   
+    background-repeat: no-repeat;
+  background-size: auto;
+  
+  background-size: 1000px;
+  background-position-x: left;
+background-image: url("2.jpg");
+height: 500px;
+
+  }
+
+  .box-sizing-1{
+    height: 110px;
+  }
+.box-sizing{
+  width: 560px;
+  height: 110px;
+  background-color: rgba(0, 0, 0, 0.29);
+border-radius: 10px;
+opacity: 0.9;
+
+}
+.box-sizing:hover{
+    opacity: 10;  
+}
+
+.box-sizing-container{
+
+    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+ #selectpicker{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-bottom: 130px;
+width: 120px;
+height: 30px;
+
+border: 2px solid silver;
+border-radius: 4px;
+}
+
+
+* {box-sizing:border-box}
+
+.search-div{
+
+    width: 150px;
+  height: 60px;
+  background-color: white;
+ border-radius: 10px;
+
+ 
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+
+
+.search-div-container{
+    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.input-Div{
+ 
+  width: 250px;
+  height: 60px;
+  background-color: white;
+ border-radius: 10px;
+
+  margin-left: 175px;
+
+
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+
+}
+
+.input-Div-container{
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 10px;
+
+  
+}
+
+.label-class{
+
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 12px;
+padding-bottom: 50px;
+padding-left: 10px;
+text-align: center;
+font-weight: bold;
+padding-top: 10px;
+}
+
+.input-search{
+
+  width: 230px;
+height: 30px;
+
+border: 2px solid silver;
+border-radius: 4px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.button-search{
+
+  background-color: #4CAF50;
+color: white;
+border-radius: 4px;
+
+width: 110px;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ 
+  cursor: pointer;  
+
+ margin-left: 440px;
+margin-top: 0px;
+
+-ms-transform: translateY(-205%);
+  transform: translateY(-205%);
+}
+
+
+
+.box-sizing-change{
+  height: 200px;
+}
+
+.menu-search{
+  width: 150px;
+  height: 60px;
+  background-color: white;
+ border-radius: 10px;
+padding-bottom: 10px;
+ -ms-transform: translateY(-250%);
+  transform: translateY(-250%);
+  margin-left: 10px;
+margin-top: 70px;
+display: none;
+
+}
+.menu-search-container{
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.fa {
+  font-size: 17px;
+  cursor: pointer;
+  user-select: none;
+  padding-bottom: 10px;
+}
+
+.fa:hover {
+  color: black;
+}
+
+#Homes{
+  padding-right: 70px;
+  padding-bottom: 10px;
+  color: grey;
+}
+.nav-bar-search{
+  padding-right: 70px;
+  padding-bottom: 10px;
+  color: grey;
+
+}
+
+
+.nav-search{
+  width: 300px;
+  height: 50px;
+  background-color: white;
+ border-radius: 10px;
+padding-bottom: 10px;
+ -ms-transform: translateY(-335%);
+  transform: translateY(-335%);
+  margin-left: 10px;
+margin-top: 30px;
+display: none;
+
+
+}
+
+
+
+a:hover{
+  border-bottom: 3px solid green;
+}
+
+
+
+
+.navbar {
+ 
+  background-color: white; 
+  margin: 0 2vw;
+  display: flex;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+ 
+
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+ 
+
+
+}
+
+ .subnav:hover .subnavbtn {
+  background-color: grey;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+ 
+}
+
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+footer{
+
+  position: fixed;
+  margin-left: 220px;
+margin-top:150;
+}
+.li-menu{
+  list-style-type: none;
+margin: 10px;
+display: block;
+}
+button{
+  border-radius: 4px;
+  
+display: inline;
+ font-size: 13px;
+ color:darkgrey;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+  border-color: grey;
+
+}
+button:hover{
+  border-bottom: 3px solid green;
+}
+
+.search-price{
+  width: 150px;
+  height: 60px;
+  background-color: white;
+ border-radius: 10px;
+padding-bottom: 10px;
+display: none;
+margin-top: 90px;
+  margin-left: 540px;
+margin-bottom: 560px; 
+-ms-transform: translateY(-505%);
+  transform: translateY(-505%);
+
+}
+
+.search-price-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+#price-p{
+  display: inline;
+margin-bottom: 102px;
+margin-right: 50px;
+color: grey;
+}
+.price-p-span{
+padding: 5px;
+
+}
+
+#arrow-1{
+
+margin-left: 120px;
+margin-top: 10px;
+
+}
+
+.price-nav{
+  width: 190px;
+  height: 250px;
+  background-color: 	#F8F9F9 ;
+ border-radius: 10px;
+padding-bottom: 30px;
+position: absolute;
+margin-left: 570px;
+top:600px;
+-ms-transform: translateY(-95%);
+  transform: translateY(-95%);
+  display: none;
+
+}
+.price-nav-search{  
+  padding-right: 70px;
+  
+}
+
+.currency-h{
+  color: #1F618D;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+padding-right: 20px;
+text-align: center;
+padding-top: 8px;
+}
+#Currency{
+  background-color:#E5E7E9 ;
+width: 158%;
+height: 35px;
+
+padding-left: 25px;
+position: relative;
+bottom: 15px;
+border-radius: 10px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+.modal-content1 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close1 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+hr {
+  border:none;
+  height: 20px;
+ 	width: 90%;
+	height: 50px;
+	
+	border-bottom: 1px solid grey;
+	box-shadow: 0 20px 20px -20px grey;
+  margin: -50px auto 20px; }
+
+
+  #Ch{
+    color:grey;
+  }
+
+  #AC{
+
+    color:grey;
+  }
+.button-currency {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-area{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+.select-currency{
+  border-color: lightgrey;
+border-radius:4px;
+
+}
+
+.select-area{
+  border-color: lightgrey;
+border-radius:4px;
+}
+
+.select-area-div{
+  position: relative;
+  bottom: 10px;
+}
+
+.Curreny-input{
+
+position: relative;
+
+border-radius: 3px;
+width: 80px;
+left: 2px;
+border: 2px solid silver;
+bottom: 45px;
+
+}
+
+.Curreny-input-1{
+
+  position: relative;
+
+border-radius: 3px;
+width: 80px;
+left: 100px;
+border: 2px solid silver;
+bottom: 184.5px;
+
+}
+.min{
+  position:relative;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  bottom:30px;
+  left:5px;
+}
+.max{
+ 
+  position:relative;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  bottom:169.5px;
+  left:125px;
+
+}
+
+.min-content{
+  left:2px;
+bottom: 40px;
+display: flex;
+max-width: 80px;
+position: relative;
+scrollbar-color: #fe59c2;
+scrollbar-highlight-color: hotpink yellowgreen;
+}
+
+.max-content{
+  left:100px;
+bottom: 180px;
+display: flex;
+max-width: 80px;
+position: relative;
+scrollbar-color: #fe59c2;
+scrollbar-highlight-color: hotpink yellowgreen;
+
+}
+
+.min-ul{
+position: relative;
+right: 35px;
+bottom: 105px;
+
+
+list-style-type: none;
+}
+
+.min-li{
+
+  border: 2px solid silver;
+  padding: 5px;
+}
+
+.area-search{
+  width: 150px;
+  height: 60px;
+  background-color: white;
+ border-radius: 10px;
+padding-bottom: 10px;
+ -ms-transform: translateY(-250%);
+  transform: translateY(-250%);
+  position: relative;
+  left: 700px;
+bottom: 774.5px;
+display: none;
+}
+
+.area-search-container{
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+#arrow-2{
+  margin-left: 120px;
+margin-top: 10px;
+}
+.area-nav{
+  width: 190px;
+  height: 250px;
+  background-color: 	#F8F9F9 ;
+ border-radius: 10px;
+padding-bottom: 10px;
+position: absolute;
+margin-left: 770px;
+top:600px;
+-ms-transform: translateY(-95%);
+  transform: translateY(-95%);
+  display: none;
+}
+
+.area-nav-search{
+  padding-right: 70px;
+  
+}
+#unit{
+
+  background-color:#E5E7E9 ;
+width: 158%;
+height: 35px;
+
+padding-left: 25px;
+position: relative;
+bottom: 15px;
+border-radius: 10px;
+}
+.unit-h{
+  color: #1F618D;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+padding-right: 20px;
+text-align: center;
+padding-top: 8px;
+}
+.select-currency-div{
+
+ position: relative;
+
+ bottom: 10px;
+}
+#area-p{
+  display: inline;
+margin-bottom: 102px;
+margin-right: 50px;
+color: grey;
+}
+
+.bed-search{
+position: relative;
+left:855px;
+width: 70px;
+  height: 60px;
+  background-color: white;
+ border-radius: 10px;
+padding-bottom: 10px;
+ -ms-transform: translateY(-250%);
+  transform: translateY(-250%);
+bottom: 833px;
+display: none;
+}
+
+.bed-search-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bed-input{
+width: 50px;
+
+border: 2px solid silver;
+border-radius: 4px;
+
+}
+.link{
+  position: relative;
+  left: 20px;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.link-1{
+  position: relative;
+  left: 20px;
+  color: yellow;
+  background-color: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+}
+.link-2{
+  position: relative;
+  left: 20px;
+  color: yellow;
+  background-color: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+}
+.link-3{
+  position: relative;
+  left: 20px;
+  color: yellow;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+  <div class="slideshow-container">
+    <div class="box-sizing-container">
+        <div class="box-sizing" id="box-sizing">
+
+                <button  class="link" id="link">Show <span id="link-word" >More </span> <span  id="link-word"  style="display: none">Less!</span></button> 
+                
+                <button  class="link-1" id="link-1" href=""> Change Currency</button> 
+                <button  class="link-2" id="link-2" href=""> Change Area Unit</button> 
+                <a  class="link-3" id="link-3" href=""><span style="color: silver;">|</span> Reset</a> 
+<div class="search-div" id="#search-div">
+    <label class="label-class">City</label>
+    <div class="search-div-container">
+       
+<select  id="selectpicker"   name="selectCity" > 
+<option>Select City</option>
+<option>Islamabad</option>
+<option>Rawalpindi</option>
+<option>Karachi</option>
+<option>Lahore</option>
+<option>Abbottabad</option>
+<option>Abdul Hakim</option>
+<option>Ahmed pur East</option>
+<option>Alipur</option>
+<option>Arif wala</option>
+<option>Astore</option>
+<option>Attock</option>
+<option>Awaran</option>
+<option>Badin</option>
+<option>Bagh</option>
+<option>Bahawalnagar</option>
+<option>Bahawalpur</option>
+<option>Bannu</option>
+<option>Barnala</option>
+<option>Bhakkar</option>
+<option>Bhalwal</option>
+<option>Bhimber</option>
+<option>Buner</option>
+<option>Burewala</option>
+<option>Chaghi</option>
+<option>Chakwal</option>
+</select>
+
+</div>
+</div>
+
+
+
+<div class="input-Div">
+  <label class="label-class">Location</label>
+  <div class="input-Div-container">
+<input type="search" class="input-search" id="nput-search">
+
+
+  </div>
+</div>
+
+<input type="submit" class="button-search" value="Search">
+
+
+
+<div class="menu-search" id="menu-search">
+  <label class="label-class">Property Type</label>
+<div class="menu-search-container">
+
+  <p id="Homes">Homes</p> 
+  <i id="arrow"  onclick="myFunction(this)" class="fa fa-caret-down"></i>
+ 
+
+</div>
+</div>
+
+<div class="nav-search" id="nav-search">
+  <nav class="nav-bar-search" id="nav-bar-search">
+    <div class="navbar">
+      <div class="subnav">
+        <button class="subnavbtn" id="home">Homes</button>
+        <div class="subnav-content">
+          <li class="li-menu" ><button style="width:100px; height:31px; float: left; margin:2px;">House</button></li>
+          <li class="li-menu"><button style="width:100px; height:31px; float: right; margin:2px;">Upper Portion</button></li>
+          <li class="li-menu"><button style="width:100px; height:31px; float: left; margin:2px;">Fram House</button></li>
+          <li class="li-menu" ><button style="width:100px; height:31px; float:right; margin:2px;">Pent House</button></li>
+          <li class="li-menu" ><button style="width:100px; height:31px; float: left; margin:2px;">Flat</button></li>
+          <li class="li-menu" ><button style="width:100px; height:31px; float: right; margin:2px;">Lower Portion</button></li>
+          <li class="li-menu" ><button style="width:100px; height:31px; float: left;margin:2px;">Room</button></li> 
+        
+          <li class="li-menu">
+            <input type="button"  style=" width:50px; height:30px; background-color: black ;   margin-left: 220px;
+            margin-top:10;  color: blanchedalmond; font-size: 15px; border-radius: 4px; " value="close" id="close">
+          </li>  
+        </div>
+      </div> 
+      <div class="subnav">
+        <button class="subnavbtn" id="plots">Plots </button>
+        <div class="subnav-content">
+          <li class="li-menu" ><button style="width:100px; height:35px; float: left; margin:2px;">Residential Plot</button></li>
+          <li class="li-menu"><button style="width:100px; height:35px; float: right; margin:2px;">Commercial Plot</button></li>
+          <li class="li-menu"><button style="width:100px; height:35px; float: left; margin:2px;">Agricultural Land</button></li>
+          <li class="li-menu" ><button style="width:100px; height:35px; float:right; margin:2px;">Industrial Land</button></li>
+          <li class="li-menu" ><button style="width:100px; height:35px; float: left; margin:2px;">Plot File</button></li>
+          <li class="li-menu" ><button style="width:100px; height:35px; float: right; margin:2px;">Plot Form</button></li>
+          
+        
+          <li class="li-menu">
+            <input type="button"  style=" width:50px; height:30px; background-color: black ;   margin-left: 220px;
+            margin-top:10;  color: blanchedalmond; font-size: 15px; border-radius: 4px; " value="close" id="close1">
+          </li>  
+        </div>
+      </div> 
+      <div class="subnav">
+        <button class="subnavbtn" id="commercial" >Commercial </button>
+        <div class="subnav-content">
+          <li class="li-menu" ><button style="width:100px; height:30px; float: left; margin:2px;">Office</button></li>
+          <li class="li-menu"><button style="width:100px; height:30px; float: right; margin:2px;">Shop</button></li>
+          <li class="li-menu"><button style="width:100px; height:30px; float: left; margin:2px;">Warehouse</button></li>
+          <li class="li-menu" ><button style="width:100px; height:30px; float:right; margin:2px;">Factory</button></li>
+          <li class="li-menu" ><button style="width:100px; height:30px; float: left; margin:2px;">Building</button></li>
+          <li class="li-menu" ><button style="width:100px; height:30px; float: right; margin:2px;">Other</button></li>
+        
+        
+          <li class="li-menu">
+            <input type="button"  style=" width:50px; height:30px; background-color: black ;   margin-left: 220px;
+            margin-top:10;  color: blanchedalmond; font-size: 15px; border-radius: 4px; " value="close" id="close2">
+          </li>  
+        </div>
+        
+      </div> 
+      
+     
+      
+
+    </div>
+  </div>
+
+
+</div>
+</div>
+  </div>
+
+<div class="search-price" id="search-price">
+  <label class="label-class" >Price (<span id="currency-change"> Rupees PKR</span> )</label>
+  <i id="arrow-1"  onclick="myFunction(this)" class="fa fa-caret-down"></i>
+  <div class="search-price-container">
+  
+ <p id="price-p"><span class="price-p-span" id="price-p-span">0</span> To <span class="price-p-span-1" id="price-p-span-1">Any</span></p>
+  </div>
+</div>
+
+<div class="price-nav" id="price-nav">
+ <div class="price-nav-search">
+   <div id="Currency"><p class="currency-h" id="myBtn">Change Currency </p></div>
+<h2 id="min" class="min">Min</h2>
+
+   <input class="Curreny-input" placeholder="Min" id="Curreny-input">
+
+   <div class="min-content" id="min-content">
+     
+    <select class="min-ul" id="min-ul">
+      <option class="min-li" value="5,800">
+           5,800
+   </option>
+   <option class="min-li" value="5,800">
+    5,800
+</option>
+
+<option class="min-li" value="5,800">
+  5,800
+</option>
+
+<option class="min-li" value="5,800">
+  5,800
+</option>
+
+<option class="min-li" value="5,800">
+  5,800
+</option>
+
+<option class="min-li" value="5,800">
+  5,800
+</option>
+
+<option class="min-li" value="5,800">
+  5,800
+</option>
+<option class="min-li" value="5,800">
+  5,800
+</option>
+
+<option class="min-li" value="5,800">
+  5,800
+</option>
+
+<option class="min-li" value="5,800">
+  5,800
+</option>
+
+   </select>
+   
+  </div>
+   <h2 id="max" class="max">Max</h2>
+   <input class="Curreny-input-1"  Placeholder="Max" id="Curreny-input-1">
+<div class="max-content" id="max-content">
+  <select class="max-ul" id="max-ul-1">
+    <option class="max-li" value="800">
+         800
+ </option>
+ <option class="max-li" value="800">
+  800
+</option>
+
+<option class="max-li" value="800">
+800
+</option>
+
+<option class="max-li" value="800">
+5,800
+</option>
+
+<option class="max-li" value="5,800">
+5,800
+</option>
+
+<option class="max-li" value="5,800">
+5,800
+</option>
+
+<option class="max-li" value="5,800">
+5,800
+</option>
+<option class="max-li" value="5,800">
+5,800
+</option>
+
+<option class="max-li" value="5,800">
+5,800
+</option>
+
+
+ </select>
+  
+</div>
+<button id="close-currency" aria-hidden="hidden" style="position: relative;  bottom: 120px; left: 10px;  background-color: darkslategrey; color: white; border-radius: 4px;">Close</button>
+<button id="save-currency" onclick="onFu()" style="position: relative; bottom: 118.5px; left: 70px;  background-color: green; color: white; border-radius: 4px;">Save</button>
+
+
+
+ </div>
+ 
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+  <center> <h3 id="Ch">Change Currency</h3></center>
+               
+                <hr >
+          <center> 
+            <div class="select-currency-div">
+            <select class="select-currency" id="select-currency" >
+            <option value="PKR">
+            Pakistan (PKR)
+            </option >
+            <option value="CAD" >
+            Canadian dollar (CAD)
+            </option>
+            <option value="SAR" >
+            Saudi Arabia (SAR)
+            </option>
+            <option value="AED" >
+            United Arab Emirates (AED)
+            </option>
+            <option value="GBP" >
+            United Kingdom (GBP)
+            </option>
+            
+            <option value="USD" >
+            United States of America (USD)
+            </option>
+            </select>
+          </div>
+          </center>
+               <center> 
+                 
+                <input type="button" class="button-currency" id="button-currency" value="Change"></center>
+              </div>
+</div>
+
+
+
+
+<div class="area-search" id="area-search">
+  <label class="label-class" >Area (<span id="area-change"> Marla</span> )</label>
+  <i id="arrow-2"  onclick="myFunction(this)" class="fa fa-caret-down"></i>
+<div class="area-search-container" id="area-search-container">
+  <p id="area-p"><span class="area-p-span" id="area-p-span">0</span> To <span class="area-p-span-1" id="area-p-span-1">Any</span></p>
+
+
+</div>
+</div>
+
+
+<div class="area-nav" id="area-nav">
+  <div class="area-nav-search">
+    <div id="unit"><p class="unit-h" id="myBtn1">Change Area unit </p></div>
+ <h2 id="min" class="min">Min</h2>
+ 
+ <input class="Curreny-input" placeholder="Min" id="Curreny-input-2">
+ 
+    <div class="min-content" id="min-content-2">
+      
+     <select class="min-ul" id="min-ul-2">
+       <option class="min-li" value="1">
+            1
+    </option>
+    <option class="min-li" value="2">
+     2
+ </option>
+ 
+ <option class="min-li" value="2">
+   2
+ </option>
+ 
+ <option class="min-li" value="3">
+  3
+ </option>
+ 
+ <option class="min-li" value="4">
+   4
+ </option>
+ 
+ <option class="min-li" value="5">
+   5
+ </option>
+ 
+ <option class="min-li" value="6">
+   6
+ </option>
+ <option class="min-li" value="7">
+   7
+ </option>
+ 
+ <option class="min-li" value="8">
+   8
+ </option>
+ 
+ <option class="min-li" value="9">
+   9
+ </option>
+ 
+    </select>
+    
+   </div>
+    <h2 id="max" class="max">Max</h2>
+    <input class="Curreny-input-1"  Placeholder="Max" id="Curreny-input-3">
+ <div class="max-content" id="max-content">
+   <select class="max-ul" id="max-ul-3">
+     <option class="max-li" value="Any">
+        Any
+  </option>
+  <option class="max-li" value="10">
+   10
+ </option>
+ 
+ <option class="max-li" value="20">
+ 20
+ </option>
+ 
+ <option class="max-li" value="30">
+ 30
+ </option>
+ 
+ <option class="max-li" value="40">
+ 40
+ </option>
+ 
+ <option class="max-li" value="50">
+ 50
+ </option>
+ 
+ <option class="max-li" value="60">
+ 60
+ </option>
+ <option class="max-li" value="70">
+70
+ </option>
+ 
+ <option class="max-li" value="80">
+ 80
+ </option>
+ 
+ 
+  </select>
+   
+ </div>
+ <button id="close-area" style="position: relative; bottom: 120px; left: 10px;  background-color: darkslategrey; color: white; border-radius: 4px;">Close</button>
+ <button id="save-area" onclick="onFu()" style="position: relative; bottom: 118.5px; left: 70px;  background-color: green; color: white; border-radius: 4px;">Save</button>
+ 
+ 
+ 
+  </div>
+  
+  
+ </div>
+
+ <div id="myModal1" class="modal1">
+
+  <!-- Modal content -->
+  <div class="modal-content1">
+    <span class="close1">&times;</span>
+  <center> <h4 id="AC">Change Area Unit</h4></center>
+               
+                <hr >
+          <center> 
+            <div class="select-area-div">
+            <select class="select-area" id="select-area" >
+              option value="Marla">
+              Marla
+               </option >
+               <option value="SQ. FT." >
+                 Square Feet
+               </option>
+               <option value="SQ. YD." >
+                 Square Yards
+               </option>
+               <option value="SQ. M." >
+                 Square Meters
+               </option>
+               <option value="Kanal" >
+             Kanal
+               </option>
+            </select>
+          </div>
+          </center>
+               <center> 
+                 
+                <input type="button" class="button-area" id="button-area" value="Change"></center>
+              </div>
+</div>
+
+<div class="bed-search" id="bed-search">
+  <label class="label-class">Bed</label>
+<div class="bed-search-container">
+
+  <input class="bed-input" id="bed-input" type="number" placeholder="bed..">
+
+</div>
+</div>
+
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#search-div").click(function()
+    {
+    
+     $("#menu-search").hide();
+    });  
+    
+  });
+  
+  </script>
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#plots").click(function()
+    {
+    
+     $("#bed-search").hide();
+    });  
+    
+  });
+  
+  </script>
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#commercial").click(function()
+    {
+    
+     $("#bed-search").hide();
+    });  
+    
+  });
+  
+  </script>
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#home").click(function()
+    {
+    
+     $("#bed-search").show();
+    });  
+    
+  });
+  
+  </script>
+
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#min-content").click(function()
+    {
+    
+     $("#close-currency").fadeOut();
+    });  
+    
+    $("#max-content").click(function()
+    {
+    
+     $("#save-currency").fadeOut();
+    }); 
+
+
+
+  });
+  //$( "#foo" ).unbind( "click", function() {
+  </script>
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#min-content").click(function()
+    {
+    
+     $("#close-currency").show();
+    });  
+    
+    $("#max-content").click(function()
+    {
+    
+     $("#save-currency").show();
+    });  
+
+  });
+  //$( "#foo" ).unbind( "click", function() {
+  </script>
+
+
+
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#close-currency").click(function()
+    {
+    
+     $("#price-nav").hide();
+    });  
+    
+  });
+  
+  </script>
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#price-nav").click(function()
+    {
+    
+     $("#nav-search").hide();
+    });  
+    
+  });
+  
+  </script>
+
+
+
+<script>
+
+
+jQuery(document).ready(function($)
+{
+  
+  $("#save-currency").click(function()
+  {
+  
+    var value= $('#min-ul').val();
+     
+   
+
+    $('#Curreny-input').val(value);
+
+
+$("#price-p-span").replaceWith(value);
+ 
+  });  
+  
+});
+
+</script>
+
+
+<script>
+
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#save-area").click(function()
+    {
+    
+      var value= $('#min-ul-2').val();
+       
+     
+  
+      $('#Curreny-input-2').val(value);
+  
+  
+  $("#area-p-span").replaceWith(value);
+   
+    });  
+    
+  });
+  
+  </script>
+
+
+
+
+<script>
+
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#save-area").click(function()
+    {
+    
+      var value= $('#max-ul-3').val();
+       
+     
+  
+      $('#Curreny-input-3').val(value);
+  
+  
+  $("#area-p-span-1").replaceWith(value);
+   
+    });  
+    
+  });
+  
+  </script>
+
+
+
+
+<script>
+ jQuery(document).ready(function()
+{
+  
+  $("#save-currency").click(function()
+  {
+  
+    var value= $('#max-ul-1').val();
+     
+   
+
+    $('#Curreny-input-1').val(value);
+
+
+$("#price-p-span-1").replaceWith(value);
+ 
+  });  
+  
+});
+
+
+</script>
+
+<script>
+  jQuery(document).ready(function()
+ {
+   
+   $("#save-area").click(function()
+   {
+   
+     var value= $('#max-ul-1').val();
+      
+    
+ 
+     $('#Curreny-input-1').val(value);
+ 
+ 
+ $("#area-p-span-1").replaceWith(" "+value);
+  
+   });  
+   
+ });
+ 
+ 
+ </script>
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#button-currency").click(function()
+    {
+    
+      var value= $('#select-currency').val(); 
+  $("#currency-change").replaceWith(" "+value);
+  $("#currency-change-1").replaceWith(" "+value);
+    });  
+    
+  });
+  
+  
+  
+  </script>
+
+
+<script>
+
+  jQuery(document).ready(function($)
+  {
+    
+    $("#button-area").click(function()
+    {
+    
+      var value= $('#select-area').val(); 
+  $("#area-change").replaceWith(" "+value);
+
+    });  
+    
+  });
+  
+  
+  
+  </script>
+
+
+<script>
+  jQuery(document).ready(function($)
+  {
+    
+    $("#myBtn").click(function()
+    {
+    
+       $('#myModal').show(); 
+ 
+    });  
+    
+  });
+</script>
+<script>
+  jQuery(document).ready(function($)
+  {
+    
+    $("#link-1").click(function()
+    {
+    
+       $('#myModal').show(); 
+ 
+    });  
+    
+  });
+</script>
+
+<script>
+  jQuery(document).ready(function($)
+  {
+    
+    $("#link-2").click(function()
+    {
+    
+       $('#myModal1').show(); 
+ 
+    });  
+    
+  });
+</script>
+
+<script>
+  jQuery(document).ready(function($)
+  {
+    
+    $(".close").click(function()
+    {
+    
+       $('#myModal').hide(); 
+ 
+    });  
+    
+  });
+</script>
+
+
+<script>
+  jQuery(document).ready(function($)
+  {
+    
+    $("#myBtn1").click(function()
+    {
+    
+       $('#myModal1').show(); 
+ 
+    });  
+    
+  });
+</script>
+<script>
+  jQuery(document).ready(function($)
+  {
+    
+    $(".close1").click(function()
+    {
+    
+       $('#myModal1').hide(); 
+ 
+    });  
+    
+  });
+</script>
+
+
+<script>
+  jQuery(document).ready(function($)
+  {
+    
+    $("#close-area").click(function()
+    {
+    
+       $('#area-nav').hide(); 
+ 
+    });  
+    
+  });
+</script>
+
+
+
+<script>$(function(){$('select').searchableSelect();});</script>
+
+
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#nput-search").click(function()
+  {
+  
+  
+    
+    $("#area-search").toggle();
+    $("#box-sizing").toggleClass("box-sizing-change");
+    $("#menu-search").toggle();
+    $("#search-price").toggle();
+    $("#bed-search").toggle();
+    $("#nav-search").hide();
+    $("#price-nav").hide();
+    
+  });  
+  
+});
+
+</script>
+
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#search-div").click(function()
+  {
+  
+  
+    
+
+    $("#box-sizing").toggleClass("box-sizing-1");
+
+    
+  });  
+  
+});
+
+</script>
+
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#close").click(function()
+  {
+
+    $("#nav-search").hide();
+    
+  });  
+  
+});
+
+</script>
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $(".link").click(function()
+  {
+
+var value="less";
+
+    $("#link-word").toggle();
+    $("#area-search").toggle();
+    $("#box-sizing").toggleClass("box-sizing-change");
+    $("#menu-search").toggle();
+    $("#search-price").toggle();
+    $("#bed-search").toggle();
+    $("#nav-search").hide();
+    $("#price-nav").hide();
+  });  
+  
+});
+
+</script>
+
+
+
+
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#close1").click(function()
+  {
+
+    $("#nav-search").hide();
+    
+  });  
+  
+});
+
+</script>
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#close2").click(function()
+  {
+
+    $("#nav-search").hide();
+    
+  });  
+  
+});
+
+</script>
+
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $(".close").click(function()
+  {
+
+    $("#nav-search").hide();
+    
+  });  
+  
+});
+
+</script>
+
+  <script>
+
+
+function myFunction(x) {
+  x.classList.toggle("fa-caret-up");
+}
+</script>
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#arrow").click(function()
+  {
+  
+
+    $("#nav-search").toggle();
+    
+  });  
+  
+});
+
+</script>
+
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#arrow-1").click(function()
+  {
+  
+
+    $("#price-nav").toggle();
+    
+  });  
+  
+});
+
+</script>
+
+<script>
+  jQuery(document).ready(function($)
+{
+  
+  $("#arrow-2").click(function()
+  {
+  
+
+    $("#area-nav").toggle();
+    
+  });  
+  
+});
+
+</script>
+
+
+</body>
+</html>
