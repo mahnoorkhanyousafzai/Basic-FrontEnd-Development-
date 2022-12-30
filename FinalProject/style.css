@@ -1,0 +1,36 @@
+body{
+  
+    background-image: url("Images/blue-futuristic-networking-technology_53876-100679.webp");
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Courier New', Courier, sans-serif ,monospace, fantasy;
+    font-size: medium;
+    font-weight: 400;
+  
+}
+
+#name,#age,#email,select{
+    height: 30px;
+    background-color: white;
+}
+    input,select,textarea ,button,fieldset{
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+
+      border-radius: 8px;
+      border-color: aliceblue;
+     
+    }
+    legend{ font-size: medium;    }
+    
+div{
+    background-color: rgb(24, 74, 90);
+    opacity: 0.8;
+    width: 60%;
+    margin: 5px;
+padding: 5px;
+}
+
+fieldset{border-style: none;}
+
