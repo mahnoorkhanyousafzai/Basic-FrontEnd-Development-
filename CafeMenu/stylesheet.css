@@ -1,0 +1,64 @@
+body{
+    background-image: url("Images/shu-Coffee-Beans-Bag_69380449-1440x823.jpg") ;
+    background-repeat: no-repeat;
+
+}
+div{
+    background-color: indianred;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+
+}
+h1,h2{
+    font-style: bold;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: italic;}
+.item p{display: inline-block;}
+.dessert {
+    width: 25%;
+    text-align: left;
+}
+.flavor{
+    width: 25%;
+    text-align: left;
+}
+.price{
+ width: 25%;
+    text-align: right;
+}
+hr{
+    height: 2px;
+    background-color: red;
+    border-color: black;
+}
+.menuitem{
+    width: 10%;
+    height: 10%;
+}
+footer{
+    font-size: 16px;
+}
+
+
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: brown;
+  }
+  
+  a:active {
+    color: brown;
+  }
+.address{
+    margin-bottom: 5px;
+}
